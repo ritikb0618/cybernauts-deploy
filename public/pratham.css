@@ -1,0 +1,239 @@
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    background-color: black;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .wrapper .footer-widget {
+    width: calc(20% - 30px);
+    margin: 0 15px 50px;
+    padding: 0 12px;
+  }
+  
+  .wrapper .footer-widget:nth-child(1) {
+    width: calc(40% - 50px);
+    margin-right: 15px;
+  }
+  
+  .wrapper .footer-widget .logo {
+    margin-bottom: 30px;
+    vertical-align: middle;
+  }
+  
+  .wrapper .footer-widget p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 24px;
+    max-width: 425px;
+    color: white;
+    letter-spacing: 0.75px;
+  }
+  
+  .wrapper .footer-widget h6 {
+    color: #9e9e9e;
+    margin: 10px 0 35px;
+    font-size: 21px;
+    font-weight: 600;
+  }
+  
+  .wrapper .footer-widget .links li {
+    list-style: none;
+  }
+  
+  .wrapper .footer-widget .links li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: 55px;
+    transition: all 0.3s ease-out;
+    font-weight: 500;
+  }
+  
+  .copyright-wrapper {
+    padding: 20px 0;
+    border-top: 1px solid rgba(156, 156, 162, 0.4);
+  }
+  
+  .copyright-wrapper p {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  .copyright-wrapper p a {
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+  }
+  
+  @media (max-width: 992px) {
+    .social ul li i {
+      font-size: 2.35vw !important;
+    }
+    .container {
+      max-width: 960px;
+    }
+  
+    .wrapper .footer-widget,
+    .wrapper .footer-widget:nth-child(1) {
+      width: calc(50% - 30px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .desc {
+      font-size: 15px !important;
+    }
+    .copyright-wrapper {
+      padding: 10px;
+    }
+    .copyright-wrapper p {
+      font-size: 10px;
+    }
+    .wrapper .footer-widget {
+      margin: 0;
+      text-align: center;
+    }
+    .wrapper .footer-widget h2 {
+      font-weight: 600;
+    }
+    .social-links {
+      padding-top: 10px;
+    }
+    .wrapper .footer-widget p {
+      line-height: normal !important;
+      letter-spacing: normal !important;
+    }
+    .first {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .logop {
+      margin-bottom: -10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wrapper .footer-widget h6 {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    .wrapper .footer-widget .links li a {
+      font-size: 12px;
+      line-height: 36px;
+    }
+    .social ul li i {
+      font-size: 3.25vw !important;
+    }
+  
+    .container {
+      position: relative;
+      max-width: 720px;
+    }
+  
+    .wrapper .footer-widget:nth-child(1) {
+      width: 100%;
+      margin: 0 10px 50px;
+      margin-bottom: 8px;
+    }
+    .social h6 {
+      display: none;
+    }
+    .social ul {
+      display: I !important;
+      flex-direction: row !important;
+      gap: 4vw;
+      width: 90vw !important;
+    }
+  }
+  
+  .links li i {
+    color: #000;
+  }
+  .social ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .social a span {
+    margin-left: 1vw;
+  }
+  .social ul li i {
+    color: #d246d2;
+  }
+  .social i:hover {
+    scale: 1.1;
+    transition: 0.2s all ease;
+  }
+  
+  .social a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.05vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .social a:hover {
+    transform: scale(1.1);
+  }
+  
+  .social a i {
+    transition: color 0.3s ease-out;
+  }
+  
+  .social a:hover i {
+    color: #ff1b69;
+  }
+  #tryi {
+    text-decoration: none;
+    font-size: 30px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: yellow;
+  }
+  #purp {
+    color: purple;
+  }
+  .logo {
+    border-radius: 50%;
+  }
+  .logop {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+  }
+  .logop h2 {
+    font-size: 27px;
+    margin-bottom: 8px;
+  }

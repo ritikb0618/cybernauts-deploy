@@ -1,0 +1,706 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* background-color: black; */
+}
+
+
+
+
+
+@font-face {
+  font-family: technopath;
+  src: url(fonts/Technopath.otf);
+}
+
+.navbar {
+  width: 100%;
+  height: 15%;
+  background-color: black;
+}
+
+.navbar .navbar-nav .nav-item a {
+  padding: 30px;
+}
+
+.nav-item {
+  font-size: 130%;
+  font-family: technopath;
+  margin-right: 5%;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar-toggler {
+  color: white !important;
+}
+
+.navbar-toggler-icon {
+  color: aliceblue !important;
+  background-color: aliceblue;
+}
+
+.nav-link:hover {
+  color: #d246d2 ! important;
+
+}
+
+.navbar-brand {
+  font-family: technopath;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************* */
+body {
+  margin: 0%;
+  padding: 0%;
+  background: #0F0F0F;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: 'Pristina';
+  src: url('./fonts/pristina.ttf') format('woff2'),
+    url('./fonts/pristina.ttf') format('woff'),
+    url('./fonts/pristina.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Technical Drawing';
+  src: url('TechnicalDrawing.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* <!-- First Heading (Under the Guidance of)--> */
+.font-size4 {
+  font-size: 8rem;
+  color: aliceblue;
+  margin: 0%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  /* font-style: italic; */
+
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  /* font-style: italic; */
+}
+
+/* <!-- First Heading (Under the Guidance of)--> */
+
+
+
+/* <!-- Faculty Information --> */
+/* //Flipping the image of faculty when hovered */
+.faculty {
+  display: grid;
+  gap: 20rem;
+  margin: 5% auto;
+  grid-template-columns: repeat(auto-fit, minmax(1rem, 32rem));
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50rem;
+}
+
+.flip-container {
+  perspective: 1000px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.responsive-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.flipper {
+  position: absolute;
+  width: 100%;
+  padding-top: 110%;
+  padding-bottom: 5%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+/* .front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(360deg);
+}  */
+
+.responsive-image {
+  mix-blend-mode: luminosity;
+  border-radius: 2rem;
+  margin: auto;
+  aspect-ratio: 1;
+  width: 200px;
+  height: auto;
+  border: none !important;
+  box-sizing: border-box;
+  filter: drop-shadow(5px 5px 10px rgba(232, 222, 222, 0.5));
+}
+
+.white_text {
+  color: whitesmoke;
+}
+
+/* //Flipping the image of faculty when hovered */
+/* <!-- Faculty Information --> */
+
+
+
+
+
+/* <!-- (Project Section) -->
+
+
+
+
+
+<!-- Heading project animation --> */
+.font-size1 span:first-child {
+  font-family: pristina, regular;
+  font-family: 11rem;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #FFA566, #FF6E06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.staatliches-regular {
+  font-family: "Staatliches", sans-serif;
+  font-style: normal;
+}
+
+.staatliches-regular-thin {
+  font-family: "Staatliches", sans-serif;
+  font-style: normal;
+}
+
+.font-size2 {
+  font-size: 11rem;
+  color: aliceblue;
+}
+
+.font-size3 {
+  font-size: 2.5rem;
+  color: azure;
+}
+
+/*<!-- Heading project animation --> */
+
+
+
+
+/* <!-- Projects display --> */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1.5rem, 40rem));
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  align-self: center;
+  position: relative;
+}
+
+.project-img {
+  object-fit: cover;
+  align-items: center;
+  margin: 0% auto;
+  transform: scale(0.9);
+  height: 100%;
+  width: 100%;
+}
+
+:hover.image-box {
+  transform: scale(1.02);
+  transition: transform 0.4s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0f0f0fc7;
+}
+
+.image-box:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: rgb(255, 255, 255) 0.4px 0.4px 2px;
+  font-family: Technical Drawing, regular;
+}
+
+/*Code Button*/
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+/*Code Button*/
+
+.extra_projects {
+  display: none;
+}
+
+
+/* <!-- Explore All and Show less Button --> */
+.button {
+  line-height: 0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1rem;
+  background-color: var(--clr);
+  color: #fff;
+  border-radius: 2.5rem;
+  font-weight: 600;
+  padding: .75rem 1rem;
+  padding-left: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color .3s;
+}
+
+.explore_btn_size {
+  font-family: "Poppins", sans-serif;
+}
+
+.button__icon-wrapper {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  position: relative;
+  color: var(--clr);
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.button:hover {
+  background-color: #000;
+}
+
+.button:hover .button__icon-wrapper {
+  color: #000;
+}
+
+.button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button:hover .button__icon-svg:first-child {
+  transition: transform .3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.button:hover .button__icon-svg--copy {
+  transition: transform .3s ease-in-out .1s;
+  transform: translate(0);
+}
+
+.explore_btn {
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+
+/* <!-- Explore All and Show less Button --> */
+
+
+
+/* <!-- (Project Section) -->
+
+
+
+/* //Flipping the image of faculty when hovered */
+
+
+
+
+
+@media (max-width:2000px) {
+  .font-size1 span:first-child {
+    font-size: 11rem;
+  }
+}
+
+/* Media Queries for specific adjustments */
+@media (max-width: 1360px) {
+  .responsive-image {
+    max-width: 110%;
+  }
+
+  .faculty {
+    gap: 5rem;
+  }
+
+  .font-size1 span:first-child {
+    font-size: 10rem;
+  }
+
+  .font-size3 {
+    font-size: 2.25rem;
+  }
+
+  .text {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .responsive-image {
+    max-width: 105%;
+  }
+
+  .faculty {
+    gap: 5rem;
+  }
+
+  .font-size4 span {
+    font-size: 8rem;
+  }
+
+  .font-size1 span:first-child {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 1105px) {
+  .faculty {
+    gap: 0rem;
+  }
+}
+
+@media (max-width: 1060px) {
+  .responsive-image {
+    max-width: 100%;
+  }
+
+  .faculty {
+    gap: 50rem;
+  }
+
+  .font-size4 span {
+    font-size: 7rem;
+  }
+
+  .font-size1 span:first-child {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    max-width: 100%;
+  }
+
+  .faculty {
+    gap: 30rem;
+  }
+
+  .font-size4 span {
+    font-size: 6rem;
+  }
+
+  .font-size1 span:first-child {
+    font-size: 6rem;
+  }
+
+  .font-size3 {
+    font-size: 4rem;
+  }
+
+  .text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .responsive-image {
+    max-width: 100%;
+  }
+
+  .faculty {
+    gap: 30rem;
+  }
+
+  .font-size4 span {
+    font-size: 5rem;
+  }
+
+  .font-size1 span:first-child {
+    font-size: 5rem;
+  }
+  .text{
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width:480px) {
+  .font-size3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .responsive-image {
+    max-width: 100%;
+  }
+
+  .font-size4 span {
+    font-size: 3rem;
+  }
+
+  .font-size1 span:first-child {
+    font-size: 3.5rem;
+  }
+
+}
+
+@media (max-width: 360px) {
+  .responsive-image {
+    max-width: 100%;
+  }
+
+  .font-size4 span {
+    font-size: 4rem;
+  }
+
+  .font-size1 span:first-child {
+    font-size: 4rem;
+  }
+}
+
+.nav-link:hover {
+  color: #d246d2 !important;
+}
+
+.topnav {
+  background-color: #000000;
+  font-family: technopath !important;
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a :hover{
+  color: #d246d2;
+}
+.topnav.responsive a:hover{
+  color: #d246d2;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+ a .icon{
+  position: absolute;
+  left: 0;
+  
+ }
+ .topnav {
+  justify-content: space-evenly;
+ }
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+   
+    flex-direction: column;
+    
+  }
+  .topnav.responsive a.icon {
+   
+    background-color: black;
+    display: flex;
+   
+  }
+  .topnav.responsive a {
+    float: none;
+    display: flex;
+    text-align: left;
+    font-size: 1rem;
+    padding: 8px 12px;
+
+  }
+  
+  .topnav {
+    float: none;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}

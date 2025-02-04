@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ribbon {
+    width: 100%;
+    background-color: black;
+    color: white;
+    max-height: 4vh;
+    /* color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+@key
+@font-face {
+    font-family: 'ribbon';
+    src: url('/fonts/TechnicalDrawing.ttf');
+}
+
+.ribbon span {
+    font-size: 1.5vw;
+    font-family: 'ribbon', sans-serif;
+    color: white;
+    cursor: pointer;
+    margin: min(2em,2%);
+    margin: 0 100px;
+    text-decoration: none;
+}
+
+.ribbon span:hover {
+    text-decoration: underline;
+}
