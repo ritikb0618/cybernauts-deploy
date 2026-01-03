@@ -108,15 +108,15 @@ clubarrow.addEventListener("click", () => {
   switch (a) {
       case 0:
           head271name.textContent = "Diya (Co-Lead)";
-          head272name.textContent = "Kunishka";
+          head272name.textContent = "Ritik";
           head271image.src = "headBW/diya.png";
-          head272image.src = "headBW/kunishka.png";
+          head272image.src = "headBW/ritik.png";
           break;
       case 1:
           head271name.textContent = "Pratham";
-          head272name.textContent = "Ritesh";
+          head272name.textContent = "Kunishka";
           head271image.src = "headBW/pratham.png";
-          head272image.src = "headBW/ritesh.png";
+          head272image.src = "headBW/kunishka.png";
           break;
       case 2:
           head271name.textContent = "Saanvi";
@@ -173,10 +173,10 @@ head271image.addEventListener('mouseout', function() {
 head272image.addEventListener('mouseover', function() {
   switch (a) {
       case 1:
-          head272image.src = "headCLR/kunishka.png";
+          head272image.src = "headCLR/ritik.png";
           break;
       case 2:
-          head272image.src = "headCLR/ritesh.png";
+          head272image.src = "headCLR/kunishka.png";
           break;
       case 3:
           head272image.src = "headCLR/arvind.png";
@@ -189,10 +189,10 @@ head272image.addEventListener('mouseover', function() {
 head272image.addEventListener('mouseout', function() {
   switch (a) {
       case 1:
-          head272image.src = "headbw/kunishka.png";
+          head272image.src = "headbw/ritik.png";
           break;
       case 2:
-          head272image.src = "headbw/ritesh.png";
+          head272image.src = "headbw/kunishka.png";
           break;
       case 3:
           head272image.src = "headbw/arvind.png";
