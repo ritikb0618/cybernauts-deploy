@@ -146,7 +146,7 @@ body {
   perspective: 1000px;
   width: 100%;
   margin: 0 auto;
-
+  position: relative;
 }
 
 .responsive-container {
@@ -158,6 +158,7 @@ body {
 }
 
 .flipper {
+  cursor: pointer;
   position: absolute;
   width: 100%;
   padding-top: 110%;
@@ -180,17 +181,18 @@ body {
 }
 
 
-/* .front {
+.front {
   transform: rotateY(0deg);
 }
 
 .back {
   transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
 
 .flip-container:hover .flipper {
-  transform: rotateY(360deg);
-}  */
+  transform: rotateY(180deg);
+} 
 
 .responsive-image {
   mix-blend-mode: luminosity;
