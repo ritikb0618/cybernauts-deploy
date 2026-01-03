@@ -1,7 +1,13 @@
-// Explore Button
-document.getElementById("Explore_Button").addEventListener("click", function() {
+/* =========================================================
+   EXPLORE BUTTON LOGIC
+========================================================= */
+
+document.getElementById("Explore_Button").addEventListener("click", function () {
   const exploreButton = document.getElementById("Explore_Button");
-  const extraProjects = document.querySelectorAll("#extra_project1, #extra_project2");
+  const extraProjects = document.querySelectorAll(
+    "#extra_project1, #extra_project2"
+  );
+
   const isShowing = exploreButton.classList.toggle("showing");
 
   extraProjects.forEach(project => {
@@ -19,167 +25,105 @@ document.getElementById("Explore_Button").addEventListener("click", function() {
     </span>
   `;
 
-  exploreButton.innerHTML = `${moreIconTemplate} ${isShowing ? "Show less" : "Explore All"}`;
+  exploreButton.innerHTML = `${moreIconTemplate} ${
+    isShowing ? "Show less" : "Explore All"
+  }`;
 });
 
-/*----------------------------------------------------------------------------------------------------------------------------- */
+/* =========================================================
+   AMAZING – CRAZY – COOL ANIMATION
+========================================================= */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------------------------------------------------------------------------------------------------------------------------- */
-/* Animation of Amazing-Crazy-Cool */
-
-function amazingCrazyCool() { // Recursive call for continuous loop
-  amazing();
-  setTimeout(crazy, 550); // Delay next function call by 1 second
-}
+const anima = document.getElementById("Animation-a-c-c-a");
 
 function amazing() {
-  document.getElementById("Animation-a-c-c-a").innerHTML = 'Amazing';
+  anima.innerHTML = "Amazing";
 }
 
 function crazy() {
-  document.getElementById("Animation-a-c-c-a").innerHTML = 'Crazy';
-  setTimeout(cool, 550); // Delay next function call by 1 second
+  anima.innerHTML = "Crazy";
+  setTimeout(cool, 550);
 }
 
 function cool() {
-  document.getElementById("Animation-a-c-c-a").innerHTML = 'Cool';
-  setTimeout(awesome, 550); // Delay next function call by 1 second
+  anima.innerHTML = "Cool";
+  setTimeout(awesome, 550);
 }
 
 function awesome() {
-  document.getElementById("Animation-a-c-c-a").innerHTML = 'Awesome';
-  setTimeout(amazingCrazyCool, 550); // Call back to start over
+  anima.innerHTML = "Awesome";
+  setTimeout(amazingCrazyCool, 550);
 }
 
-// Call the animation function once to initiate the loop
+function amazingCrazyCool() {
+  amazing();
+  setTimeout(crazy, 550);
+}
+
 amazingCrazyCool();
 
-/* Animation of Amazing-Crazy-Cool */
-/*----------------------------------------------------------------------------------------------------------------------------- */
+/* =========================================================
+   RESPONSIVE FONT & IMAGE SIZE (FIXED)
+========================================================= */
 
+/* ---- Store original font sizes ONCE ---- */
 
+const fontElements = document.querySelectorAll(
+  ".font-size1, .font-size2, .font-size3, .font-size4, .text"
+);
 
+fontElements.forEach(el => {
+  if (!el.dataset.baseSize) {
+    el.dataset.baseSize = parseFloat(getComputedStyle(el).fontSize);
+  }
+});
 
+/* ---- Font Resize Logic (NO cumulative scaling) ---- */
 
+function adjustFontSize() {
+  const width = window.innerWidth;
+  let scaleFactor = 1;
 
+  if (width <= 576) scaleFactor = 0.5;
+  else if (width <= 768) scaleFactor = 0.65;
+  else if (width <= 992) scaleFactor = 0.8;
+  else if (width <= 1200) scaleFactor = 0.9;
+  else if (width >= 2500) scaleFactor = 1.4;
 
-
-
-
-// // Responsive text sizefunction adjustFontSize() {
-    const width = window.innerWidth;
-    let scaleFactor;
-
-    console.log(width);
-
-    if (width <= 755) {
-      scaleFactor = '0.24';
-  } else if (width <= 782) {
-      scaleFactor = '0.29';
-  } 
-  else if (width <= 835) {
-    scaleFactor = '0.34';
+  fontElements.forEach(el => {
+    const baseSize = parseFloat(el.dataset.baseSize);
+    el.style.fontSize = `${baseSize * scaleFactor}px`;
+  });
 }
-else if (width <= 885) {
-  scaleFactor = '0.39';
-} 
-  else if (width <= 875) {
-    scaleFactor = '0.44';
-}else if (width <= 912) {
-  scaleFactor = '0.45';
-}
-else if (width <= 945) {
-  scaleFactor = '0.49';
-}
-else if (width <= 982) {
-  scaleFactor = '0.54';
-}
-else if (width <= 992) {
-      scaleFactor = '0.59';
-  }
-  else if (width <= 1149) {
-    scaleFactor = '0.64';
-  }
-  else if (width <= 1070) {
-    scaleFactor = '0.69';
-  }
-  else if (width <= 1130) {
-    scaleFactor = '0.74';
-  } else if (width <= 1200) {
-      scaleFactor = '0.79';
-  }
-  else if (width >=2500){
-     scaleFactor='1.49'
-  } else {
-      scaleFactor = '1';
-  }
-    const elements = [
-        ...document.querySelectorAll('.font-size1'),
-        ...document.querySelectorAll('.font-size2'),
-        ...document.querySelectorAll('.font-size3'),
-        ...document.querySelectorAll('.font-size4'),
-        ...document.querySelectorAll('.text')
-    ];
 
-    elements.forEach(element => {
-        const baseFontSize = parseFloat(getComputedStyle(element).fontSize);
-        element.style.fontSize = `${baseFontSize * scaleFactor}px`;
-    });
-
-    console.log(scaleFactor);
-
+/* ---- Image Resize Logic ---- */
 
 function adjustImageSize() {
-    const images = document.querySelectorAll('.responsive-image');
-    const width = window.innerWidth;
-    let imageWidth;
+  const images = document.querySelectorAll(".responsive-image");
+  const width = window.innerWidth;
 
-    if (width <= 576) {
-        imageWidth = '50%';
-    } else if (width <= 768) {
-        imageWidth = '60%';
-    } else if (width <= 992) {
-        imageWidth = '70%';
-    } else if (width <= 1200) {
-        imageWidth = '80%';
-    } else {
-        imageWidth = '100%';
-    }
+  let imageWidth = "100%";
 
-    images.forEach(image => {
-        image.style.width = imageWidth;
-    });
+  if (width <= 576) imageWidth = "50%";
+  else if (width <= 768) imageWidth = "60%";
+  else if (width <= 992) imageWidth = "70%";
+  else if (width <= 1200) imageWidth = "80%";
+
+  images.forEach(img => {
+    img.style.width = imageWidth;
+  });
 }
+
+/* ---- Unified Resize Handler ---- */
 
 function adjustSizes() {
-    adjustFontSize();
-    adjustImageSize();
+  adjustFontSize();
+  adjustImageSize();
 }
 
-window.addEventListener('load', adjustSizes);
-window.addEventListener('resize', adjustSizes);
-window.addEventListener('reload', adjustSizes);
+window.addEventListener("load", adjustSizes);
+window.addEventListener("resize", adjustSizes);
 
-//--------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-//Flipping the image of faculty when hovered
-
-
-
-
+/* =========================================================
+   END OF FILE
+========================================================= */
