@@ -204,19 +204,19 @@ head272image.addEventListener('mouseover', function() {
 head272image.addEventListener('mouseout', function() {
   switch (a) {
       case 1:
-          head272image.src = "headbw/ritik.png";
+          head272image.src = "headBW/ritik.png";
           break;
       case 2:
-          head272image.src = "headbw/kunishka.png";
+          head272image.src = "headBW/kunishka.png";
           break;
       case 3:
-          head272image.src = "headbw/arvind.png";
+          head272image.src = "headBW/arvind.png";
           break;
       case 4:
-          head272image.src="headbw/baani.png";
+          head272image.src="headBW/baani.png";
           break;
       case 0:
-          head272image.src = "headbw/baani.png";
+          head272image.src = "headBW/baani.png";
           break;
   }
 });
