@@ -124,16 +124,22 @@ clubarrow.addEventListener("click", () => {
           head271image.src = "headBW/saanvi.png";
           head272image.src = "headBW/arvind.png";
           break;
-      case 3:
+      case 4:
           head271name.textContent = "Yaten (Lead)";
           head272name.textContent = "Baani (Lead)";
           head271image.src = "headBW/yaten.jpg";
           head272image.src = "headBW/baani.png";
           break;
+      case 3:
+          head271name.textContent = "Pratham";
+          head272name.textContent = "Baani (Lead)";
+          head271image.src = "headBW/pratham.png";
+          head272image.src = "headBW/baani.png";
+          break;
   }
 
   // Increment a and loop back to 0 after 3
-  a = (a + 1) % 4;
+  a = (a + 1) % 5;
 });
 
 // Mouseover and Mouseout event listeners for head images
@@ -147,6 +153,9 @@ head271image.addEventListener('mouseover', function() {
           break;
       case 3:
           head271image.src = "headCLR/saanvi.png";
+          break;
+      case 4:
+          head271image.src="headCLR/pratham.png";
           break;
       case 0:
           head271image.src = "headCLR/yaten.jpg"; // Fixed: Corrected the path
@@ -163,6 +172,9 @@ head271image.addEventListener('mouseout', function() {
           break;
       case 3:
           head271image.src = "headBW/saanvi.png";
+          break;
+      case 4:
+          head271image.src="headBW/pratham.png";
           break;
       case 0:
           head271image.src = "headBW/yaten.jpg"; // Fixed: Corrected the path
@@ -181,6 +193,9 @@ head272image.addEventListener('mouseover', function() {
       case 3:
           head272image.src = "headCLR/arvind.png";
           break;
+      case 4:
+          head272image.src="headCLR/baani.png";
+          break;
       case 0:
           head272image.src = "headCLR/baani.png";
           break;
@@ -196,6 +211,9 @@ head272image.addEventListener('mouseout', function() {
           break;
       case 3:
           head272image.src = "headbw/arvind.png";
+          break;
+      case 4:
+          head272image.src="headbw/baani.png";
           break;
       case 0:
           head272image.src = "headbw/baani.png";
